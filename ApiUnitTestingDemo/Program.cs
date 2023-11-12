@@ -1,3 +1,5 @@
+using ApiUnitTestingDemo.Services;
+
 namespace ApiUnitTestingDemo
 {
     public class Program
@@ -9,6 +11,7 @@ namespace ApiUnitTestingDemo
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddSingleton<IWeatherForecastService, WeatherForecastService>();
 
             var app = builder.Build();
 
